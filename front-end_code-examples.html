@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Front End Code Examples</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#question2 img").hide().slideDown("slow");
+	})
+</script>
+</head>
+
+<body>
+
+
+<!-- 1. Update this code so that the h2 element shows in the browser on its own line. -->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		#question1 .fl_l {
+			float: left;
+		}
+		
+		#question1 .fl_r {
+			float: right;
+		}
+		#question1 h2 {
+			clear: left;
+		}
+		@keyframes question2b {
+			from {opacity: 0; left: 200px}
+			to {opacity: 1; left: 0px}
+		}
+		#question2b img {
+			animation-name: question2b;
+			animation-duration: 2s;
+			position: relative;
+		}
+		.row {
+			margin: 10px;
+		}
+		.col {
+			display: inline-block;
+			vertical-align: top;
+			margin: 5px;
+		}
+		#question3 {
+			background-color: gray;
+			padding: 5px;
+		}
+		#bluehonda {
+			height: 565px;
+		}
+		#grayhonda {
+			height: 275px;
+		}
+		#nav {
+			height: 275px;
+			padding: 5px;
+		}
+		#nav img {
+			background-color: black;
+		}
+		#section3 {
+			background-color: skyblue;
+			height: 275px;
+			padding: 10px;
+		}
+		#oilpic {
+			height: 275px;
+		}
+
+
+		@media only screen and (max-width: 480px) {
+			.mobile-0 {
+				display: none;
+			}
+			.mobile-1 {
+				width: 100%;
+			}
+			#nav img {
+				width: 48%;
+				height: 50%;
+			}
+			#bluehonda {
+				height: 275px;
+			}
+
+		}
+		@media only screen and (min-width: 481px) {
+			.tablet-1 {
+				width: 47%;
+			}
+			.tablet-2 {
+				width: 100%;
+			}
+			#nav img {
+				width: 48%;
+				height: 50%;
+			}
+
+		}
+		@media only screen and (min-width: 1024px) {
+			.desktop-1 {
+				width: 24%;
+			}
+			.desktop-2 {
+				width: 48%;
+				float: left;
+			}
+			#nav img {
+				width: 48%;
+				height: 50%;
+			}
+		
+		}
+	</style>
+	
+	<div id="question1">
+		<div class="fl_l">
+			Left Container
+		</div>
+		
+		<div class="fl_r">
+			Right Container
+		</div>
+		<h2>Full Width Header</h2>
+	</div>
+
+	
+	
+<!-- 1b. Please describe another method you could use to accomplish the same result. -->
+<!-- Answer:  Place a <br> tag after the "fl_r" div and before the h2 tag.-->
+
+
+<!-- 2. Animate the following HTML using Javascript so that the image flys into the page -->
+	<div id="question2">
+		<img src="http://a4.dealerimages.dealereprocess.com/image/upload/c_limit,e_trim,f_auto,fl_lossy,w_250/v1/svp/Colors_PNG1280/2016/16ford/16fordfusionse2a/ford_16fusionse2a_angularfront_shadowblack"/>
+	</div>
+
+<!-- 2b. Now do the same thing using CSS -->
+	<div id="question2b">
+		<img src="http://a4.dealerimages.dealereprocess.com/image/upload/c_limit,e_trim,f_auto,fl_lossy,w_250/v1/svp/Colors_PNG1280/2016/16ford/16fordfusionse2a/ford_16fusionse2a_angularfront_shadowblack" />
+	</div>
+
+
+<!-- 3. Update the code below to match the mockups provided. The design should be responsive and no external libraries should be used. -->
+	<div id="question3">
+		<div class="row">
+			<img src="http://responsivedemo.dealereprocess.com/resrc/media/image/929629/honda-template-15.jpg" id="bluehonda" class="col mobile-1 tablet-2 desktop-2">
+		</div>
+		
+		<div class="row">
+			<a href="/search/">
+				<img src="http://responsivedemo.dealereprocess.com/assets/d1/img/honda-template-15-img/btn_shop.jpg" id="grayhonda" class="col mobile-s tablet-1 desktop-1">
+			</a>
+
+			<div id="section3" class="col mobile-0 tablet-1 desktop-1">
+				<h1>Welcome To Demo Site</h1>
+				<br>
+				<span>SALES: 888-888-1234</span>
+				<br>
+				<span>SERVICE: 888-888-1234</span>
+				<br>
+				<span>PARTS: 888-888-1234</span>
+				<br>
+				<a href="/hours-and-directions/">
+					<span>701 Warrenville Rd, Lisle, IL 60532</span>
+				</a>
+			</div>
+		</div>	
+		
+		<div class="row">
+			<div id="nav" class="col mobile-1 tablet-1 desktop-1">
+				<a href="/search/">
+					<img src="http://responsivedemo.dealereprocess.com/assets/d1/img/honda-template-15-img/btn_current_specials.png">
+				</a>
+				<a href="/value-trade-in/">
+					<img src="http://responsivedemo.dealereprocess.com/assets/d1/img/honda-template-15-img/btn_value_trade.png">
+				</a>
+				<br>
+				<a href="/order-parts/">
+					<img src="http://responsivedemo.dealereprocess.com/assets/d1/img/honda-template-15-img/btn_order_parts.png">
+				</a>
+				<a href="/meet-our-staff/">
+					<img src="http://responsivedemo.dealereprocess.com/assets/d1/img/honda-template-15-img/btn_our_team.png">
+				</a>		
+			</div>
+	
+			<a href="/service-appointment/">
+				<img src="http://responsivedemo.dealereprocess.com/assets/d1/img/honda-template-15-img/btn_schedule.jpg" alt="Shop Inventory" id="oilpic" class="col mobile-1 tablet-1 desktop-1">
+			</a>
+		</div>
+	
+	</div>
+
+
+</body>
+</html>
